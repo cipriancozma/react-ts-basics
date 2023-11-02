@@ -4,7 +4,9 @@ import Goal from "./components/Goal";
 function App() {
   return (
     <main>
-      <Goal title="Learn TS" description="Learning from scratch" />
+      <Goal title="Learn TS">
+        <p>Learning from scratch</p>
+      </Goal>
     </main>
   );
 }

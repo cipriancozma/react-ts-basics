@@ -1,4 +1,7 @@
+import { ReactNode } from "react";
+
 export type GoalProps = {
   title: string;
-  description: string;
+  description?: string;
+  children: ReactNode;
 };
