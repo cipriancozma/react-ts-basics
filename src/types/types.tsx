@@ -5,3 +5,13 @@ export type GoalProps = {
   description?: string;
   children: ReactNode;
 };
+
+interface ImageProps {
+  src: string;
+  alt: string;
+}
+
+export type HeaderProps = {
+  image: ImageProps;
+  children: ReactNode;
+};
