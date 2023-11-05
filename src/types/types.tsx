@@ -15,3 +15,9 @@ export type HeaderProps = {
   image: ImageProps;
   children: ReactNode;
 };
+
+export type CourseGoal = {
+  id: number;
+  title: string;
+  description: string;
+};
