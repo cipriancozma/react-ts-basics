@@ -21,3 +21,7 @@ export type CourseGoal = {
   title: string;
   description: string;
 };
+
+export type CourseGoalList = {
+  goals: CourseGoal[];
+};

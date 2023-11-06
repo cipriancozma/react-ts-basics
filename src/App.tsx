@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Goal from "./components/Goal";
 import Header from "./components/Header";
 import { CourseGoal } from "./types/types";
+import GoalList from "./components/GoalList";
 
 function App() {
   const [goals, setGoals] = useState<CourseGoal[]>([]);
@@ -28,15 +28,7 @@ function App() {
       >
         <h1>Your Goals</h1>
       </Header>
-      <ul>
-        {goals.map((goal) => (
-          <li key={goal.id}>
-            <Goal title={goal.title}>
-              <p>{goal.description}</p>
-            </Goal>
-          </li>
-        ))}
-      </ul>
+      <GoalList goals={goals} />
 
       <button onClick={handleAddGoal}>Add goal</button>
     </main>
