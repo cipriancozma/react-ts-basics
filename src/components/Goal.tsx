@@ -14,7 +14,13 @@ import { GoalProps } from "../types/types";
 //   );
 // }
 
-const Goal: FC<GoalProps> = ({ title, description, children }) => {
+const Goal: FC<GoalProps> = ({
+  id,
+  title,
+  description,
+  children,
+  handleDelete,
+}) => {
   return (
     <article>
       <div>
@@ -22,7 +28,7 @@ const Goal: FC<GoalProps> = ({ title, description, children }) => {
         {description && <p>{description}</p>}
         {children}
       </div>
-      <button>Delete</button>
+      <button onClick={() => handleDelete(id)}>Delete</button>
     </article>
   );
 };

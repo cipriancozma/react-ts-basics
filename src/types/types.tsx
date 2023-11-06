@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
 
 export type GoalProps = {
+  id: number;
   title: string;
   description?: string;
   children: ReactNode;
+  handleDelete: (id: number) => void;
 };
 
 interface ImageProps {
@@ -24,4 +26,5 @@ export type CourseGoal = {
 
 export type CourseGoalList = {
   goals: CourseGoal[];
+  handleDelete: (id: number) => void;
 };
