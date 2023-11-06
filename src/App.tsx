@@ -3,16 +3,17 @@ import "./App.css";
 import Header from "./components/Header";
 import { CourseGoal } from "./types/types";
 import GoalList from "./components/GoalList";
+import NewGoal from "./components/NewGoal";
 
 function App() {
   const [goals, setGoals] = useState<CourseGoal[]>([]);
 
-  function handleAddGoal() {
+  function handleAddGoal(goal: string, summary: string) {
     setGoals((prevGoals) => {
       const newGoal: CourseGoal = {
         id: Math.random(),
-        title: "Learn TS",
-        description: "Learn it in depth",
+        title: goal,
+        description: summary,
       };
       return [...prevGoals, newGoal];
     });
@@ -32,9 +33,8 @@ function App() {
       >
         <h1>Your Goals</h1>
       </Header>
+      <NewGoal handleAddGoal={handleAddGoal} />
       <GoalList goals={goals} handleDelete={handleDeleteGoal} />
-
-      <button onClick={handleAddGoal}>Add goal</button>
     </main>
   );
 }

@@ -28,3 +28,7 @@ export type CourseGoalList = {
   goals: CourseGoal[];
   handleDelete: (id: number) => void;
 };
+
+export type NewGoalProps = {
+  handleAddGoal: (goal: string, summary: string) => void;
+};
