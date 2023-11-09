@@ -32,3 +32,8 @@ export type CourseGoalList = {
 export type NewGoalProps = {
   handleAddGoal: (goal: string, summary: string) => void;
 };
+
+export type InfoBoxProps = {
+  mode: "hint" | "warning";
+  children: ReactNode;
+};
