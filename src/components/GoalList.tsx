@@ -11,7 +11,11 @@ const GoalList: FC<CourseGoalList> = ({ goals, handleDelete }) => {
   let warningBox: ReactNode;
 
   if (goals.length >= 4) {
-    warningBox = <InfoBox mode="warning">Too many goals.</InfoBox>;
+    warningBox = (
+      <InfoBox mode="warning" severity="high">
+        Too many goals.
+      </InfoBox>
+    );
   }
 
   return (
